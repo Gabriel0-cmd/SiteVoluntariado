@@ -1,0 +1,488 @@
+:root {
+  --orange: #f08a24;
+  --blue: #1f4a8f;
+  --white: #ffffff;
+  --gray: #f4f6fb;
+  --dark: #1d3557;
+  --soft: #e9f1ff;
+  --text: #162d4a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1rem 0 3rem;
+}
+
+header {
+  color: var(--white);
+  padding: 2.2rem 1rem 1.2rem;
+}
+
+.header-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-mark {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.logo-mark svg {
+  width: 44px;
+  height: 44px;
+}
+
+.logo-text p {
+  margin: 0;
+  opacity: 0.88;
+  font-size: 0.95rem;
+}
+
+.logo-text h1 {
+  margin: 0.25rem 0 0;
+  font-size: 1.6rem;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.nav-link {
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  transition: background 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+body.home {
+  background: radial-gradient(circle at 15% 20%, rgba(255, 176, 60, 0.22), transparent 24%),
+    radial-gradient(circle at 85% 10%, rgba(31, 74, 143, 0.08), transparent 15%),
+    linear-gradient(180deg, #fff7ec 0%, #ffffff 100%);
+}
+
+body.home header {
+  background: linear-gradient(135deg, #ff8c3a, #1f4a8f);
+}
+
+body.projeto {
+  background: radial-gradient(circle at 82% 16%, rgba(31, 74, 143, 0.18), transparent 22%),
+    radial-gradient(circle at 18% 80%, rgba(255, 176, 60, 0.08), transparent 18%),
+    linear-gradient(180deg, #e6f0ff 0%, #f8fbff 100%);
+}
+
+body.projeto header {
+  background: linear-gradient(135deg, #143f6b, #2365a8);
+}
+
+body.voluntarios {
+  background: radial-gradient(circle at 50% 10%, rgba(240, 138, 36, 0.18), transparent 26%),
+    radial-gradient(circle at 15% 70%, rgba(31, 74, 143, 0.08), transparent 18%),
+    linear-gradient(180deg, #e8efff 0%, #ffffff 100%);
+}
+
+body.voluntarios header {
+  background: linear-gradient(135deg, #1f4a8f, #254e98);
+}
+
+.hero-visual {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+}
+
+.visual-image,
+.image-canvas {
+  border-radius: 26px;
+  overflow: hidden;
+  min-height: 260px;
+  background: rgba(255, 255, 255, 0.76);
+  display: grid;
+  place-items: center;
+}
+
+.visual-image img,
+.image-canvas img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  margin-top: -2rem;
+}
+
+section {
+  background: var(--white);
+  border-radius: 28px;
+  box-shadow: 0 28px 70px rgba(31, 74, 143, 0.08);
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #2f5f99;
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 0.95rem 1.75rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.button-primary {
+  background: var(--white);
+  color: var(--blue);
+}
+
+.button-secondary {
+  background: rgba(255,255,255,0.14);
+  color: var(--white);
+}
+
+.button-primary:hover,
+.button-secondary:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+.home-hero,
+.project-hero,
+.volunteer-hero {
+  display: grid;
+  gap: 2rem;
+}
+
+.home-hero {
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+}
+
+.hero-content h2,
+.project-hero h2,
+.volunteer-hero h2 {
+  margin: 0.75rem 0 1rem;
+  line-height: 1.05;
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+}
+
+.home-hero p,
+.project-hero p,
+.volunteer-hero p {
+  max-width: 44rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.visual-card,
+.project-highlight,
+.volunteer-metrics,
+.mission-card,
+.preview-card,
+.timeline-card,
+.status-card,
+.form-panel,
+.profile-card,
+.profile-text,
+.project-cards .card,
+.developer-grid > * {
+  background: rgba(255,255,255,0.98);
+  border-radius: 24px;
+  padding: 1.75rem;
+  box-shadow: 0 18px 40px rgba(31, 74, 143, 0.08);
+}
+
+.visual-card {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.visual-pill {
+  display: inline-flex;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: rgba(240, 138, 36, 0.16);
+  color: #b35b08;
+  font-weight: 700;
+}
+
+.mission-grid,
+.home-preview,
+.project-cards,
+.timeline-section,
+.form-section,
+.developer-grid,
+.footer-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.mission-grid,
+.home-preview,
+.timeline-section,
+.form-section,
+.developer-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.mission-card,
+.preview-card,
+.timeline-card,
+.profile-card,
+.profile-text,
+.status-card {
+  min-height: 160px;
+}
+
+.mission-card h3,
+.preview-card h3,
+.timeline-card h3,
+.status-card h3,
+.profile-text h3 {
+  margin-top: 0;
+}
+
+.project-hero {
+  grid-template-columns: 1.3fr 0.9fr;
+}
+
+.project-highlight p,
+.volunteer-metrics div p,
+.status-card p,
+.profile-text p,
+.profile-card p {
+  margin: 0.85rem 0 0;
+}
+
+.project-cards .card {
+  padding: 1.75rem;
+}
+
+.timeline-card ol {
+  padding-left: 1.2rem;
+}
+
+.timeline-card ol li {
+  margin-bottom: 0.85rem;
+}
+
+.image-block {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.image-block.project-image {
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-canvas {
+  min-height: 260px;
+  border-radius: 24px;
+  background: radial-gradient(circle at center, rgba(240,138,36,0.16), rgba(31,74,143,0.08));
+  position: relative;
+}
+
+.image-canvas::before {
+  content: "";
+  position: absolute;
+  inset: 1.5rem;
+  background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8), transparent 45%), radial-gradient(circle at 80% 60%, rgba(255,255,255,0.35), transparent 30%);
+  border-radius: 20px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+label {
+  display: grid;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #d8dde8;
+  border-radius: 14px;
+  padding: 0.95rem 1rem;
+  font: inherit;
+  background: var(--white);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid rgba(31, 74, 143, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+button {
+  border: none;
+  background: var(--blue);
+  color: var(--white);
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+button:hover {
+  background: #163b72;
+}
+
+.volunteer-status {
+  border-radius: 18px;
+  background: #eff6ff;
+  padding: 1rem 1.25rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.volunteer-count,
+.visit-note {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.profile-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.profile-card img {
+  border-radius: 22px;
+  object-fit: cover;
+  height: 240px;
+  width: 100%;
+}
+
+.profile-text {
+  display: grid;
+  gap: 1rem;
+}
+
+.site-footer {
+  padding: 1.5rem 0 3rem;
+}
+
+.site-footer p {
+  margin: 0;
+  text-align: center;
+  color: #4b5d7f;
+}
+
+.visit-note {
+  color: #254070;
+}
+
+@media (max-width: 900px) {
+  .home-hero,
+  .project-hero,
+  .volunteer-hero,
+  .image-block.project-image,
+  .timeline-section,
+  .form-section,
+  .developer-grid,
+  .mission-grid,
+  .home-preview {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    margin-top: -1.5rem;
+  }
+}
+
+@media (max-width: 620px) {
+  header {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .hero-content h2,
+  .project-hero h2,
+  .volunteer-hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .button-primary,
+  .button-secondary {
+    width: 100%;
+  }
+}

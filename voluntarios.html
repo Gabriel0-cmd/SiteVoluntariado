@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voluntários | Caminho Solidário</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="voluntarios" data-page-label="Página de Voluntários">
+  <header>
+    <div class="header-inner container">
+      <div class="logo-box">
+        <div class="logo-mark" aria-label="Logo da Escola Paulo de Tarso">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M14 18 L30 10 L46 18 V46 L30 54 L14 46 Z" fill="#ffffff" />
+            <path d="M30 10 V54" stroke="#ffb03b" stroke-width="4" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          <p>Escola Paulo de Tarso</p>
+          <h1>Voluntários</h1>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="projeto.html" class="nav-link">Projeto</a>
+        <a href="voluntarios.html" class="nav-link active">Voluntários</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="volunteer-hero">
+      <div>
+        <span class="eyebrow">Participe ativamente</span>
+        <h2>Inscreva-se para ser voluntário do Caminho Solidário e fazer parte da transformação.</h2>
+        <p>Complete o formulário abaixo e ajude a Escola Paulo de Tarso a oferecer suporte de qualidade para estudantes do Fundamental I.</p>
+      </div>
+      <div class="volunteer-metrics">
+        <div>
+          <strong>Horas de impacto</strong>
+          <p>Encontros semanais projetados para gerar aprendizado e acolhimento.</p>
+        </div>
+        <div>
+          <strong>Comunidade engajada</strong>
+          <p>Professores, alunos e famílias unidos por uma causa social.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <article class="form-panel">
+        <div class="section-head">
+          <h3>Inscrição de voluntário</h3>
+          <span>Formulário online</span>
+        </div>
+        <form id="volunteer-form" class="form-grid">
+          <label for="name">Nome completo *</label>
+          <input id="name" type="text" required placeholder="Seu nome completo" />
+
+          <label for="age">Idade *</label>
+          <input id="age" type="number" required placeholder="Sua idade" min="12" />
+
+          <label for="email">E-mail *</label>
+          <input id="email" type="email" required placeholder="seu@email.com" />
+
+          <label for="area">Área de apoio *</label>
+          <select id="area" required>
+            <option value="" disabled selected>Escolha um tema</option>
+            <option value="leitura">Leitura e escrita</option>
+            <option value="matematica">Matemática</option>
+            <option value="jogos">Jogos educativos</option>
+            <option value="apoio">Apoio emocional</option>
+          </select>
+
+          <label for="notes">Motivação *</label>
+          <textarea id="notes" required placeholder="Por que você quer ser voluntário?"></textarea>
+
+          <button type="submit">Enviar inscrição</button>
+        </form>
+      </article>
+
+      <article class="status-panel">
+        <div class="status-card">
+          <h3>Status da inscrição</h3>
+          <p>Os dados do voluntário são salvos no armazenamento local do navegador para confirmar participação e manter a contagem de inscritos.</p>
+          <div id="volunteer-message" class="volunteer-status">Aguardando inscrição...</div>
+          <p class="volunteer-count">Total de voluntários inscritos: <span id="volunteer-count">0</span></p>
+          <p id="visit-note" class="visit-note">A última visita aparecerá aqui.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="developer-section">
+      <div class="section-head">
+        <h3>Desenvolvedor do site</h3>
+        <span>Equipe</span>
+      </div>
+      <div class="developer-grid">
+        <div class="profile-card">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='560' height='320'><rect width='560' height='320' fill='%231f4a8f'/><circle cx='140' cy='120' r='60' fill='%23f08a24'/><rect x='220' y='80' width='220' height='160' rx='24' fill='%23ffffff'/><circle cx='300' cy='144' r='32' fill='%231f4a8f'/><path d='M260 240 q80 50 160 0' stroke='%231f4a8f' stroke-width='18' fill='none'/><text x='280' y='300' font-size='28' fill='%23ffffff' text-anchor='middle'>Foto do grupo</text></svg>" alt="Imagem do desenvolvedor" />
+          <div>
+            <p><strong>Nome do aluno/grupo:</strong> Turma da Solidariedade</p>
+            <p><strong>Turma:</strong> 9º ano / Ensino Fundamental</p>
+            <p><strong>Tecnologias:</strong> HTML, CSS e JavaScript puro</p>
+          </div>
+        </div>
+        <div class="profile-text">
+          <p>Desenvolvido com foco em usabilidade, acessibilidade e funcionalidade de armazenamento local para garantir que a inscrição seja lembrada.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Uma página com foco em voluntariado real: formulário funcional, feedback imediato e visual profissional.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
