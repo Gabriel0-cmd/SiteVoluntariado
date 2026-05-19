@@ -389,7 +389,7 @@ textarea:focus {
 
 textarea {
   resize: vertical;
-  min-height: 140px;
+  min-height: 220px;
 }
 
 button {
@@ -429,7 +429,7 @@ button:hover {
 .profile-card img {
   border-radius: 22px;
   object-fit: cover;
-  height: 240px;
+  height: 320px;
   width: 100%;
 }
 
