@@ -10,11 +10,8 @@
   <header>
     <div class="header-inner container">
       <div class="logo-box">
-        <div class="logo-mark" aria-label="Logo da Escola Paulo de Tarso">
-          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M14 18 L30 10 L46 18 V46 L30 54 L14 46 Z" fill="#ffffff" />
-            <path d="M30 10 V54" stroke="#ffb03b" stroke-width="4" />
-          </svg>
+        <div class="logo-mark" aria-label="Símbolo do Colégio Paulo de Tarso">
+          <img src="assets/images/download.png" alt="Símbolo do Colégio Paulo de Tarso" />
         </div>
         <div class="logo-text">
           <p>Escola Paulo de Tarso</p>
@@ -25,6 +22,8 @@
         <a href="index.html" class="nav-link">Início</a>
         <a href="projeto.html" class="nav-link">Projeto</a>
         <a href="voluntarios.html" class="nav-link active">Voluntários</a>
+        <a href="mais-informacoes.html" class="nav-link">Mais Informações</a>
+        <a href="sobre-escola.html" class="nav-link">Sobre a Escola</a>
       </nav>
     </div>
   </header>
@@ -89,6 +88,22 @@
           <p id="visit-note" class="visit-note">A última visita aparecerá aqui.</p>
         </div>
       </article>
+
+      <article class="map-panel">
+        <div class="status-card">
+          <h3>Localização no mapa</h3>
+          <p>Veja onde o Colégio Paulo de Tarso está localizado e como chegar para participar do voluntariado.</p>
+          <div class="map-frame">
+            <iframe
+              src="https://www.google.com/maps?q=Rua+Mazzini+61+Cambuci+São+Paulo&output=embed"
+              title="Mapa do Colégio Paulo de Tarso"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </article>
     </section>
 
     <section class="developer-section">
@@ -98,16 +113,38 @@
       </div>
       <div class="developer-grid">
         <div class="profile-card">
-          <img src="imagem-eu.jpg" alt="Foto de Gabriel Zardetto" />
+          <img src="assets/images/imagem-eu.jpg" alt="Foto de Gabriel Zardetto" />
           <div>
             <p><strong>Nome:</strong> Gabriel Zardetto</p>
             <p><strong>Turma:</strong> 2 EM TEC</p>
             <p><strong>Tecnologias:</strong> HTML, CSS e JavaScript puro</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/Gabriel0-cmd" target="_blank" rel="noopener">github.com/Gabriel0-cmd</a></p>
           </div>
         </div>
         <div class="profile-text">
           <p>Desenvolvido por Gabriel Zardetto com foco em usabilidade e apoio à comunidade escolar: o formulário salva localmente os dados para facilitar o acompanhamento dos inscritos e gerar impacto real nas atividades.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="contact-panel">
+      <div class="section-head">
+        <h3>Contato e informações do colégio</h3>
+        <span>Matricule-se ou saiba mais</span>
+      </div>
+      <div class="contact-grid">
+        <article class="contact-card">
+          <h4>Endereço</h4>
+          <p>Rua Mazzini, 61 - Cambuci, São Paulo - SP</p>
+        </article>
+        <article class="contact-card">
+          <h4>Telefone</h4>
+          <p>(11) 3729-7060</p>
+        </article>
+        <article class="contact-card">
+          <h4>História</h4>
+          <p>O Colégio Paulo de Tarso foi fundado em 1982 e iniciou oficialmente suas atividades de registro em 15 de março de 1982.</p>
+        </article>
       </div>
     </section>
   </main>

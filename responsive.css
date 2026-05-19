@@ -1,0 +1,281 @@
+/* TABLET GRANDE (769px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  body {
+    grid-template-columns: 220px 1fr;
+  }
+
+  header {
+    width: 220px;
+    padding: 1.3rem 0.9rem;
+  }
+
+  .logo-mark {
+    width: 58px;
+    height: 58px;
+  }
+
+  .logo-mark svg,
+  .logo-mark img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .logo-text h1 {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.85rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  .hero-content h2,
+  .project-hero h2,
+  .volunteer-hero h2,
+  .page-hero h2 {
+    font-size: clamp(1.9rem, 3vw, 2.6rem);
+  }
+}
+
+/* TABLET PEQUENO (481px - 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+  .logo-mark {
+    width: 52px;
+    height: 52px;
+  }
+
+  .logo-mark svg,
+  .logo-mark img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .logo-text h1 {
+    font-size: 1.1rem;
+  }
+
+  .logo-text p {
+    font-size: 0.8rem;
+  }
+
+  .nav-link {
+    padding: 0.55rem 0.75rem;
+    font-size: 0.78rem;
+  }
+
+  section {
+    padding: 1.3rem;
+    border-radius: 22px;
+  }
+
+  .hero-content h2,
+  .project-hero h2,
+  .volunteer-hero h2,
+  .page-hero h2 {
+    font-size: clamp(1.7rem, 5vw, 2.3rem);
+  }
+
+  .mission-card,
+  .preview-card,
+  .timeline-card,
+  .card {
+    padding: 1.2rem;
+  }
+
+  .form-grid {
+    gap: 0.8rem;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .visual-image,
+  .image-canvas {
+    min-height: 220px;
+  }
+
+  .profile-card img {
+    height: 240px;
+  }
+}
+
+/* MOBILE (até 480px) */
+@media (max-width: 480px) {
+  body > header {
+    padding: 0.9rem 0.7rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .logo-box {
+    gap: 0.6rem;
+  }
+
+  .logo-mark {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logo-mark svg,
+  .logo-mark img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo-text h1 {
+    font-size: 0.95rem;
+  }
+
+  .logo-text p {
+    font-size: 0.7rem;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.72rem;
+    border-left: 2px solid transparent;
+  }
+
+  .nav-link.active {
+    border-left-color: #ffb03b;
+  }
+
+  section {
+    padding: 0.9rem;
+    border-radius: 18px;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+  }
+
+  .hero-content h2,
+  .project-hero h2,
+  .volunteer-hero h2,
+  .page-hero h2 {
+    font-size: 1.5rem;
+    line-height: 1.15;
+  }
+
+  .hero-content p,
+  .project-hero p,
+  .volunteer-hero p,
+  .page-hero p {
+    font-size: 0.85rem;
+  }
+
+  .mission-card,
+  .preview-card,
+  .timeline-card,
+  .profile-card,
+  .status-card,
+  .card {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .mission-card h3,
+  .preview-card h3,
+  .timeline-card h3,
+  .card h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .mission-card p,
+  .preview-card p,
+  .timeline-card p,
+  .card p {
+    font-size: 0.82rem;
+  }
+
+  .form-grid {
+    gap: 0.65rem;
+  }
+
+  label {
+    font-size: 0.82rem;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 0.65rem;
+    font-size: 0.82rem;
+    border-radius: 8px;
+  }
+
+  textarea {
+    min-height: 130px;
+  }
+
+  button {
+    padding: 0.75rem 1rem;
+    font-size: 0.82rem;
+    border-radius: 8px;
+  }
+
+  .button-primary,
+  .button-secondary {
+    font-size: 0.85rem;
+  }
+
+  .visual-image,
+  .image-canvas {
+    min-height: 180px;
+    border-radius: 16px;
+  }
+
+  .profile-card img {
+    height: 180px;
+  }
+
+  .map-panel iframe {
+    min-height: 200px;
+  }
+
+  .section-head h3 {
+    font-size: 1.1rem;
+  }
+
+  .section-head span {
+    font-size: 0.75rem;
+  }
+
+  .timeline-card li {
+    font-size: 0.82rem;
+  }
+
+  .contact-card {
+    padding: 0.95rem;
+  }
+
+  .contact-card h4 {
+    font-size: 0.92rem;
+  }
+
+  .contact-card p {
+    font-size: 0.82rem;
+  }
+
+  .site-footer p {
+    font-size: 0.78rem;
+  }
+}

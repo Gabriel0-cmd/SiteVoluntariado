@@ -159,16 +159,84 @@ function renderHeroVisual() {
 
 function renderProjectCanvas() {
   const canvas = document.querySelector('.image-canvas');
-  if (!canvas) return;
+  if (!canvas || canvas.querySelector('img')) return;
 
   canvas.innerHTML = `<img src="${svgDataUri(createProjectImageSvg())}" alt="Ilustração IA gerada para o projeto" />`;
 }
 
 function renderProfileImages() {
   document.querySelectorAll('.profile-card img').forEach((img) => {
-    img.src = svgDataUri(createProfileImageSvg());
-    img.alt = 'Ilustração da equipe do voluntariado';
+    const currentSrc = img.getAttribute('src') || '';
+    if (!currentSrc || currentSrc.startsWith('data:image/svg+xml')) {
+      img.src = svgDataUri(createProfileImageSvg());
+      img.alt = 'Ilustração da equipe do voluntariado';
+    }
   });
+}
+
+function animateVolunteerCount() {
+  if (!volunteerCount) return;
+
+  const target = getVolunteerCount();
+  const start = 0;
+  const duration = 900;
+  let startTime = null;
+
+  function update(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const progress = Math.min((timestamp - startTime) / duration, 1);
+    const value = Math.round(start + (target - start) * progress);
+    volunteerCount.textContent = String(value);
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+function applyRevealClasses() {
+  const selectors = [
+    '.hero-content',
+    '.project-highlight',
+    '.visual-card',
+    '.mission-card',
+    '.preview-card',
+    '.timeline-card',
+    '.image-canvas',
+    '.contact-card',
+    '.profile-card',
+    '.school-summary',
+    '.form-panel',
+    '.status-card',
+    '.section-head',
+    '.card'
+  ];
+  document.querySelectorAll(selectors.join(',')).forEach((el) => {
+    el.classList.add('reveal-on-scroll');
+  });
+}
+
+function enableScrollReveal() {
+  const revealItems = document.querySelectorAll('.reveal-on-scroll');
+  if (!revealItems.length) return;
+
+  const observer = new IntersectionObserver((entries, observerRef) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observerRef.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  revealItems.forEach((element) => observer.observe(element));
+}
+
+function renderPageAnimations() {
+  applyRevealClasses();
+  enableScrollReveal();
+  animateVolunteerCount();
 }
 
 function handleFormSubmit(event) {
@@ -217,6 +285,7 @@ if (form) {
 }
 
 renderPageGraphics();
+renderPageAnimations();
 renderVolunteerStatus();
 renderLastVisit();
 updateLastVisitedPage();
